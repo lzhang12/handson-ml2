@@ -45,7 +45,7 @@
    
    * Comparison
    
-     ![Comparison of algorithms for Linear Regression](https://raw.githubusercontent.com/lzhang12/handson-ml/master/images/training_linear_models/Comparison%20of%20algorithms%20for%20Linear%20Regression.png)
+     ![Comparison of algorithms for Linear Regression](https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/training_linear_models/Comparison%20algorithms%20Linear%20Regression.png)
    
 3. Polynomial Regression
 
@@ -92,7 +92,7 @@
 
    * Early Stopping Regularization
 
-     <img src="https://raw.githubusercontent.com/lzhang12/handson-ml/master/images/training_linear_models/Early%20Stopping%20Regularization.png" alt="early stopping" style="zoom:35%;" />
+     <img src="https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/training_linear_models/Early%20Stopping%20Regularization.png" alt="early stopping" style="zoom:35%;" />
 
      * `early_stopping` introduced in `SGDregressor` in sklearn 0.20
 

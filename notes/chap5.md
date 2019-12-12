@@ -24,7 +24,7 @@
 
 3. Computational Complexity
 
-   <img src="https://raw.githubusercontent.com/lzhang12/handson-ml/master/images/svm/svm_comparison.png" alt="svm_complexity" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/svm/svm_comparison.png" alt="svm_complexity" style="zoom:50%;" />
 
 4. SVM Regression
 
