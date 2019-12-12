@@ -8,7 +8,6 @@
 checkpoint
 logs/*
 tf_logs/*
-images/**/*.png
 images/**/*.dot
 my_*
 person.proto
@@ -20,4 +19,4 @@ datasets/spam
 datasets/titanic
 datasets/words
 datasets/jsb_chorales
-
+exercise/spam_filter/*
