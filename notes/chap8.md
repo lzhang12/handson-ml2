@@ -21,7 +21,7 @@
 
   * Manifold learning
 
-    * manifol assumptio/manifold hypothesis
+    * manifol assumption/manifold hypothesis
 
       *most real-world high-dimensional datasets lie close to a much lower-dimensional manifold.*
 

@@ -45,7 +45,9 @@
    
    * Comparison
    
-     ![Comparison of algorithms for Linear Regression](https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/training_linear_models/Comparison%20algorithms%20Linear%20Regression.png)
+     ![Comparison of algorithms for Linear Regression](https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/training_linear_models/Comparison_algorithms_Linear_Regression.png)
+     
+     * hyperparameters at least: learning rate and initial guess
    
 3. Polynomial Regression
 
@@ -92,7 +94,7 @@
 
    * Early Stopping Regularization
 
-     <img src="https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/training_linear_models/Early%20Stopping%20Regularization.png" alt="early stopping" style="zoom:35%;" />
+     <img src="https://raw.githubusercontent.com/lzhang12/handson-ml2/master/images/training_linear_models/Early_Stopping_Regularization.png" alt="early stopping" style="zoom:35%;" />
 
      * `early_stopping` introduced in `SGDregressor` in sklearn 0.20
 
@@ -114,7 +116,7 @@
 
    * partial derivative
 
-     $$\frac{\partial J}{\partial \boldsymbol{\theta}} = \frac{1}{m} \boldsymbol{X}^T (\boldsymbol{\sigma} - \boldsymbol{y})$$
+     $$\frac{\partial J}{\partial \boldsymbol{\theta}} = \frac{1}{m} \boldsymbol{X}^T (\hat{\boldsymbol{p}} - \boldsymbol{y})$$
 
    * regularization paramter in `sklearn` is $C = 1/\alpha$, where $\alpha$ is typically used in other regression methods to control the regularization strength
 
@@ -128,7 +130,7 @@
 
    * Softmax function
 
-     $$\hat{p}_k \sigma(\boldsymbol{s}(\boldsymbol{x}))_k = \frac{\exp(s_k(\boldsymbol{x}))}{\sum\limits_{j=1}^K \exp(s_j(\boldsymbol{x}))}$$
+     $$\hat{p}_k = \sigma(\boldsymbol{s}(\boldsymbol{x}))_k = \frac{\exp(s_k(\boldsymbol{x}))}{\sum\limits_{j=1}^K \exp(s_j(\boldsymbol{x}))}$$
 
    * Softmax Regression classifier prediction
 

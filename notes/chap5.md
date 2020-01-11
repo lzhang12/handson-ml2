@@ -8,18 +8,16 @@
      * balance between keeping the street as large as possible, and limiting the margin violation
      * `sklearn.svm LinearSVC(C = , loss =)`
        * higher $C$ --> narrower decision boundary
-       * using QP solver, so faster than `sklearn.svm SVC(kernel = 'linear')`
-       * another way is to use `SGDClassifier`
-         * cost function
-         * hinge loss
-
+       * using QP solver, faster than `sklearn.svm.SVC(kernel = 'linear')`
+       * another way is  `sklearn.linear_model.SGDClassifier(loss = 'hinge', alpha = 1/(m*C))`
+   
 2. Nonlinear Classification
 
    * polynomial kernel
-     * `sklearn.svc SVC(kernel = 'poly', degree = , coef0 = )`
-       * `coef0` controls how much he model is influenced by the high degree polynomials versus the low-degree polynomials
+     * `sklearn.svm.SVC(kernel = 'poly', degree = , coef0 = )`
+       * `coef0` controls how much the model is influenced by the high degree polynomials versus the low-degree polynomials
    * similarity function
-     * `sklearn SVC(kernel = 'rbf', gamma = , C = )`
+     * `sklearn.svm.SVC(kernel = 'rbf', gamma = , C = )`
        * `gamma` is the std in the Gaussian RBF (radial basis function), smaller `gamma` narrower the Gaussian distribution, the more irregular the decision boundary.
 
 3. Computational Complexity
@@ -30,10 +28,10 @@
 
    * SVM Regression tries to fit as many instances as possible on the street while limiting margin violations (i.e., instances off the street)
    * `linear`
-     * `sklearn.svm LinearSVR(epsilon = )`
-       * `epsilon` controls the width of the street
+     * `sklearn.svm.LinearSVR(epsilon = )`
+       * `epsilon` controls the width of the street, the larger `epsilon`, the wider the street
    * nonlinear
-     * `sklearn.svm SVR(kernel='poly', degree = , C = , epsilon = )`
+     * `sklearn.svm.SVR(kernel='poly', degree = , C = , epsilon = )`
        * `C` is the regularization parameter
 
 5. Math Behind
@@ -61,19 +59,19 @@
        * $\zeta^{(i)}$ is the slack variable, measuring how much the $i$th instance is allowed to violate the margin
 
    * Quadratic Programming Problem (QP problem)
-   
+
      * minimize($\boldsymbol{p}$)  $\frac{1}{2} \boldsymbol{p}^T\boldsymbol{H}\boldsymbol{p}+ \boldsymbol{f}^T\boldsymbol{p}$
-   
+
        subject to $\boldsymbol{A}\boldsymbol{p}\leq \boldsymbol{b}$
-   
+
    * Dual Problem
-   
+
      * minimize($\boldsymbol{\alpha}$)  
-   
+
    * Kernalized SVM
-   
+
    * Online SVM
-   
+
      
-   
+
    

@@ -25,6 +25,9 @@
   * Pasting
     * when sampling is performed without replacement
     * `sklearn.ensemble.BaggingClassifier(abse_estimator = , n_estimators = , max_samples = , bootstrap = False)`
+    
+    <img src="https://github.com/lzhang12/handson-ml2/blob/master/images/ensembles/bagging_pasting.png?raw=true" alt="bagging" style="zoom:50%;" />
+    
   * benefit
     * predictor can be trained in parallel
     * prediction can be made in parallel
@@ -37,7 +40,7 @@
 
 * Random Patches & Random Subspaces
 
-  * Random Patched
+  * Random Patches
     * Sampling both training instances and features
     * `sklearn.ensemble.BaggingClassifier(bootstrap = True, bootstrap_features = True)`
   * Random Subspaces
@@ -84,4 +87,5 @@
 
     * use different predictors to train part of the data, then using the predictions of the other part of the data as the training set for a new layer of predictor. More layers can be built.
 
-      <img src="https://github.com/lzhang12/handson-ml/blob/master/images/ensembles/stacking.png?raw=true" alt="stacking" style="zoom:50%;" /> 
+      <img src="https://github.com/lzhang12/handson-ml2/blob/master/images/ensembles/stacking.png?raw=true" alt="stacking" style="zoom:50%;" /> 
+

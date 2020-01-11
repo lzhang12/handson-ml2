@@ -9,7 +9,7 @@
 
 * Making Prediction
 
-  * `sklearn.tree DecisionTreeClassifier`
+  * `sklearn.tree.DecisionTreeClassifier`
 
   * impurity function
 
