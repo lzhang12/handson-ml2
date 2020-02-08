@@ -38,8 +38,10 @@
    
    * Stochastic GD
    
-     * has better chance to find global minimum than Batch GD
-     * learning schedule used to gradually reduce learning rate
+     * each epoch run $m$ times (pick instance randomly, or shuffle the training set), each time calculate the gradient vector (in this case, actually a scalar)
+     * features
+       * has better chance to find global minimum than Batch GD
+       * learning schedule used to gradually reduce learning rate
    
    * Mini-batch GD
    
@@ -132,6 +134,9 @@
 
      $$\hat{p}_k = \sigma(\boldsymbol{s}(\boldsymbol{x}))_k = \frac{\exp(s_k(\boldsymbol{x}))}{\sum\limits_{j=1}^K \exp(s_j(\boldsymbol{x}))}$$
 
+     * In essence, $\boldsymbol{s}$ is linear operator, and $\boldsymbol{\sigma}$ is a nonlinear one, and requires two properties: (1) monotonicity; (2) normalized to unity.
+     * reduction to logistic regression for binary case; in this case, $k = 1, 2$, and only $\boldsymbol{\theta}^{(1)}$ needs to be trained, $\boldsymbol{\theta}^{(2)}$ is $\boldsymbol{0}$. 
+
    * Softmax Regression classifier prediction
 
      $$\hat{y} = \text{argmax}\;\sigma(\boldsymbol{s}(\boldsymbol{x}))_k = \text{argmax}\;s_k(\boldsymbol{x}))$$
@@ -142,9 +147,10 @@
 
      $$J(\boldsymbol{\Theta}) = -\frac{1}{m}\sum\limits_{i=1}^m \sum\limits_{k=1}^K \hat{y}_k^{(i)}\log(\hat{p}_k^{(i)})$$
 
-     * $\boldsymbol{\Theta}$ is the parameter matrix, each row corresponds to $\boldsymbol{\theta}^{(k)}$
-     * $\hat{y}_k^{(i)}$ is the target probability that $i$th instance belong to class $k$, either 0 or 1
-
+  * $\boldsymbol{\Theta}$ is the parameter matrix, each row corresponds to $\boldsymbol{\theta}^{(k)}$
+    
+* $\hat{y}_k^{(i)}$ is the target probability that $i$th instance belong to class $k$, either 0 or 1
+  
    * Cross entropy gradient vector for $k$
 
      $$\nabla_{\boldsymbol{\theta}^{(k)}}J(\boldsymbol{\Theta}) =\frac{1}{m}\sum\limits_{i=1}^m (\hat{y}_k^{(i)}-\hat{p}_k^{(i)})\boldsymbol{x}^{(i)}$$
